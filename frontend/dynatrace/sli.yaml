@@ -1,0 +1,14 @@
+spec_version: 0.1.4
+indicators:
+    cpu_time: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.cpu.perRequest:splitBy():sum:names
+    db_calls: entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.dbChildCallCount:splitBy():value:names
+    error_count: entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.errors.total.count:splitBy():value:names
+    io_time: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.ioTime:splitBy():value:names
+    kpi_et_ex: entitySelector=type(SERVICE),mzId(6021512752392206502)&metricSelector=calc:service.calc_service.exceptionsbyteststep:splitBy():avg:names
+    kpi_rt: entitySelector=type(SERVICE),mzId(6021512752392206502)&metricSelector=calc:service.teststepresponsetime:splitBy("TestStep"):avg:names
+    lock_time: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.lockTime:splitBy():value:names
+    non_db_calls: entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.nonDbChildCallCount:splitBy():value:names
+    svc_rt_p50: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.response.time:splitBy():percentile(50.000000):names
+    svc_rt_p90: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names
+    svc_rt_p95: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.response.time:splitBy():percentile(95.000000):names
+    throughput_svc: entitySelector=type(SERVICE),tag("CloudAutomation:keptnorders"),mzId(6021512752392206502)&metricSelector=builtin:service.requestCount.total:splitBy():value:names
